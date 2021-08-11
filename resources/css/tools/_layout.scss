@@ -1,0 +1,151 @@
+// Conteneur
+// ==================
+:root {
+  --container-padding: 20px;
+  --container-width: calc(100vw - var(--container-padding) * 2);
+}
+
+@media only screen and (min-width: 900px) {
+  :root {
+    --container-padding: 32px;
+  }
+}
+
+@media only screen and (min-width: 1370px) {
+  :root {
+    --container-padding: 20px;
+    --container-width: 1330px;
+  }
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  position: relative;
+  z-index: 5;
+  max-width: 92rem;
+  padding: 0 4rem;
+  margin: 0 auto;
+}
+
+@include down(900) {
+  .grid-2 {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+.section {
+  padding: 7rem 0;
+  overflow: hidden;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.section-title {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 1rem;
+  line-height: 1;
+  font-size: 2.8rem;
+  margin-bottom: 0.6rem;
+}
+
+.section-title:before {
+  content: attr(data-title);
+  display: block;
+  margin-bottom: .4rem;
+  color: var(--red);
+  font-size: 1.15rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.section-title:after {
+  content: "";
+  position: absolute;
+  width: 90px;
+  height: 5px;
+  border-radius: 3px;
+  background-color: var(--red);
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.section-header .section-text {
+  max-width: 600px;
+  font-size: 1.25rem;
+  margin: 0 auto;
+  line-height: 1.6;
+  color: var(--dark-secondary);
+}
+
+.z-index {
+  position: relative;
+  z-index: 2;
+}
+
+/**
+** OVERLAY
+**/
+.overlay {
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.overlay .shape {
+  width: initial;
+  opacity: var(--opacity-shapes);
+  position: absolute;
+}
+
+.overlay.overlay-lg .shape {
+  height: 55px;
+}
+
+.overlay.overlay-sm .shape-light {
+  height: 30px;
+}
+
+.overlay .shape-light {
+  width: initial;
+  position: absolute;
+}
+
+.overlay.overlay-lg .shape.wave {
+  height: initial;
+  width: 88px;
+}
+
+.overlay.overlay-lg .shape.close {
+  height: 38px;
+}
+
+/**
+** END OVERLAY
+**/

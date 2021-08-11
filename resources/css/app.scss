@@ -1,0 +1,58 @@
+@import 'tools/reset';
+@import 'tools/function';
+@import 'tools/mixins';
+@import 'tools/layout';
+@import 'tools/typo';
+
+:root {
+  --body-color: #F6F7FB;
+  --body-color-secondary: #FFFFFF;
+  --red: #FF4D4D;
+  --dark-primary: #333333;
+  --dark-secondary: #484848;
+  --opacity-shapes: 0.2;
+  --svg-contrast: #D0CDE1;
+}
+
+@include dark() {
+  --body-color: #2F3542;
+  --body-color-secondary: #1F2937;
+  --dark-primary: #FFFFFF;
+  --dark-secondary: #BFBFBF;
+  --opacity-shapes: 0.6;
+  --svg-contrast: #5E5E5E;
+}
+
+// Generic
+// ==================
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font;
+  color: var(--dark-primary);
+  line-height: 1.6;
+  background: var(--body-color);
+  scroll-margin: 100px 0 0 0;
+  word-break: break-word;
+}
+
+img {
+  width: 100%;
+}
+
+
+/**
+* Components
+**/
+@import 'components/button';
+@import 'components/header';
+@import 'components/nav';
+@import 'components/cards';
+@import 'components/portfolio';
+@import 'components/about';
+
+.section-debug {
+  height: 100vh;
+}

@@ -1,0 +1,49 @@
+<header id="header">
+  <div class="overlay overlay-lg">
+    <img src="{{asset('assets/images/shapes/carre.png')}}" class="shape carre" alt="forme carré"
+         aria-hidden="true">
+    <img src="{{asset('assets/images/shapes/cercle.png')}}" class="shape circle" alt="forme cercle"
+         aria-hidden="true">
+    <img src="{{asset('assets/images/shapes/demi-cercle.png')}}" class="shape half-circle"
+         alt="forme demi-cercle" aria-hidden="true">
+    <img src="{{asset('assets/images/shapes/demi-cercle.png')}}" class="shape half-circle2"
+         alt="forme demi-cercle" aria-hidden="true">
+    <img src="{{asset('assets/images/shapes/close.svg')}}" class="shape close" alt="forme croix"
+         aria-hidden="true">
+    <img src="{{asset('assets/images/shapes/waves.png')}}" class="shape wave" alt="forme vague"
+         aria-hidden="true">
+    <img src="{{asset('assets/images/shapes/waves.png')}}" class="shape wave2" alt="forme vague"
+         aria-hidden="true">
+    <img src="{{asset('assets/images/shapes/triangle.png')}}" class="shape triangle" alt="forme
+    triangle" aria-hidden="true">
+    <img src="{{asset('assets/images/shapes/logo-shapes.png')}}" class="logo-shapes" alt="initial
+     de Guillemet Jeremy" aria-hidden="true">
+    <img src="{{asset('assets/images/shapes/dots-carre.png')}}" class="dot dots" alt="grille de
+    points">
+  </div>
+  @include('partials/nav')
+  <div class="header-content">
+    <div class="container grid-2">
+      <div class="column-1">
+        <h1 class="header-title">Guillemet Jeremy</h1>
+        <p class="header-text">
+          Du développement d’application web à la création de votre maquette, je serais là pour vous
+          aider à réaliser votre projet au mieux !
+        </p>
+        <div class="header-button">
+          <a href="#" class="btn btn-outlined">Télécharger mon CV</a>
+          <a href="#" class="btn btn-contained">J'ai besoin de toi !</a>
+        </div>
+      </div>
+      <div class="column-2 image">
+        <img
+          src="{{asset('assets/images/shapes/dots-wave.png')}}"
+          class="dot dot-wave"
+          alt=""
+        />
+        <img src="{{asset('assets/images/shapes/layout-img.svg')}}" alt="illustration d'une fusée
+         au décollage">
+      </div>
+    </div>
+  </div>
+</header>
