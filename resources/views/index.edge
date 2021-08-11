@@ -4,69 +4,112 @@
   @include('partials/header')
   @include('partials/services')
   @include('partials/portfolio')
-
-  <section class="about section" id="about">
+  @include('partials/about')
+  <section class="review-section section" id="testimonials">
     <div class="container">
-
       <div class="section-header">
-        <h3 class="section-title" data-title="Qui je suis ?">A propos</h3>
+        <h3 class="section-title" data-title="Ce que les clients pensent">Avis des clients</h3>
       </div>
 
-      <div class="section-body grid-2">
-        <div class="column-1">
-          <h3 class="about-title">Hey, je m'appelle</h3>
-          <p class="section-text">
-            Guillemet Jeremy et je suis passionné par l’informatique et surtout le développement web
-            ! Pour mes études, je me suis donc orienté vers un BAC PRO Système électronique &
-            Numérique au lycée Maryse Bastié de Limoges. Après l'obtention de mon diplôme, ayant
-            toujours l'envie d'évoluer, j'ai donc décidé de me former dans le développement web.
-            <br/>
-            En étant 100 % autonome, histoire d’avoir un plus gros challenge à surmonter ! Pour
-            cela, je me suis rendu sur le site d'OpenClassrooms, ou Freecodecamp et Grafikart.fr
-            pour me former et découvrir plus en profondeur le monde de développeur web FullStack !
-            Depuis, j’ai pu explorer différentes technologies et je me suis donc spécifié dans
-            certaines comme :
-            <br/>
-          </p>
-          <div class="skills">
-            <div class="skill">
-              <h3 class="skill-title">HTML / CSS</h3>
-              <div class="skill-bar">
-                <div class="skill-progress" style="width: 90%;"></div>
+      <div class="review-content grid-2">
+        <div class="column-1 reviews">
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide review">
+                <i class="fas fa-quote-left quote"></i>
+                <div class="rate">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+
+                <p class="review-text">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Laudantium adipisci veniam debitis quas, sapiente
+                  repellendus mollitia. Laboriosam labore voluptate quos?
+                </p>
+
+                <div class="review-info">
+                  <h3 class="review-name">Matias Butt</h3>
+                  <h5 class="review-job">Photographer, Paris</h5>
+                </div>
+              </div>
+
+              <div class="swiper-slide review">
+                <i class="fas fa-quote-left quote"></i>
+                <div class="rate">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+
+                <p class="review-text">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Fugiat voluptate consequatur aut tenetur fugit error
+                  molestiae quaerat ex odio rem?
+                </p>
+
+                <div class="review-info">
+                  <h3 class="review-name">Romeo Herbert</h3>
+                  <h5 class="review-job">CEO, Munich</h5>
+                </div>
+              </div>
+
+              <div class="swiper-slide review">
+                <i class="fas fa-quote-left quote"></i>
+                <div class="rate">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+
+                <p class="review-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Cupiditate voluptatum enim nemo quod amet dolorum aliquam,
+                  sapiente omnis eaque consectetur.
+                </p>
+
+                <div class="review-info">
+                  <h3 class="review-name">Jack Costa</h3>
+                  <h5 class="review-job">Director of THR, London</h5>
+                </div>
+              </div>
+
+              <div class="swiper-slide review">
+                <i class="fas fa-quote-left quote"></i>
+                <div class="rate">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+
+                <p class="review-text">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Perspiciatis ab incidunt, dicta quam inventore ipsum
+                  dolor. Consectetur nam incidunt error!
+                </p>
+
+                <div class="review-info">
+                  <h3 class="review-name">Reiss Mccartney</h3>
+                  <h5 class="review-job">Engineer, San Francisco</h5>
+                </div>
               </div>
             </div>
-            <div class="skill">
-              <h3 class="skill-title">JavaScript / TypeScript</h3>
-              <div class="skill-bar">
-                <div class="skill-progress" style="width: 70%;"></div>
-              </div>
-            </div>
-            <div class="skill">
-              <h3 class="skill-title">Node JS / Adonis JS</h3>
-              <div class="skill-bar">
-                <div class="skill-progress" style="width: 60%;"></div>
-              </div>
-            </div>
-            <div class="skill">
-              <h3 class="skill-title">React JS</h3>
-              <div class="skill-bar">
-                <div class="skill-progress" style="width: 80%;"></div>
-              </div>
-            </div>
-          </div>
+
         </div>
+
         <div class="column-2 image">
-          <img src="{{asset('assets/images/shapes/dots-carre.png')}}" alt="grille de points"
-               class="dots">
-          @!component('components/about-svg', {
-          className:"z-index"
-          })
+          <img src="./img/testi.png" alt="" class="img-element"/>
         </div>
       </div>
     </div>
   </section>
-
-  {{--  <div class="section-debug">
-
-    </div>--}}
   @end
