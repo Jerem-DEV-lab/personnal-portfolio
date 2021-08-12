@@ -149,3 +149,19 @@
 /**
 ** END OVERLAY
 **/
+
+.review-svg-image {
+  fill: var(--border-review-svg);
+}
+
+@include down(430) {
+ .section-title::before{
+   font-size: .8rem;
+ }
+  .container {
+    padding: 0 1rem;
+  }
+  .section-header h3{
+    font-size: 2rem;
+  }
+}

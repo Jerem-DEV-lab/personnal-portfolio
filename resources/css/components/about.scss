@@ -94,3 +94,14 @@ h3.about-title {
   transition: 1s;
 }
 
+@include down(550) {
+  .skill-bar {
+    width: 100%;
+  }
+}
+
+@include down(510) {
+  .about .column-1::before {
+    font-size: 3.5rem;
+  }
+}

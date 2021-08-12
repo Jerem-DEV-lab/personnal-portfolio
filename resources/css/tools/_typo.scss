@@ -7,3 +7,13 @@ $font-alt: 'Inter', sans-serif;
 .text-light {
   color: #FFFFFF !important;
 }
+
+.text-center {
+  text-align: center;
+}
+
+.p-sm {
+  max-width: 65%;
+  margin: auto;
+  line-height: 1.95;
+}

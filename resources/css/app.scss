@@ -12,6 +12,7 @@
   --dark-secondary: #484848;
   --opacity-shapes: 0.2;
   --svg-contrast: #D0CDE1;
+  --border-review-svg: #3F3D56;
 }
 
 @include dark() {
@@ -21,6 +22,7 @@
   --dark-secondary: #BFBFBF;
   --opacity-shapes: 0.6;
   --svg-contrast: #5E5E5E;
+  --border-review-svg: #FFFFFF;
 }
 
 // Generic
@@ -53,7 +55,9 @@ img {
 @import 'components/portfolio';
 @import 'components/about';
 @import 'components/notice';
+@import 'components/contact';
 
 .section-debug {
   height: 100vh;
 }
+
