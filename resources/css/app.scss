@@ -13,6 +13,7 @@
   --opacity-shapes: 0.2;
   --svg-contrast: #D0CDE1;
   --border-review-svg: #3F3D56;
+  --switch-theme-background: #3F3D56;
 }
 
 @include dark() {
@@ -23,12 +24,14 @@
   --opacity-shapes: 0.6;
   --svg-contrast: #5E5E5E;
   --border-review-svg: #FFFFFF;
+  --switch-theme-background: #FFFF;
 }
 
 // Generic
 // ==================
 html {
   scroll-behavior: smooth;
+  font-size: 100%;
 }
 
 body {
@@ -49,6 +52,7 @@ img {
 * Components
 **/
 @import 'components/button';
+@import 'components/switch';
 @import 'components/header';
 @import 'components/nav';
 @import 'components/cards';
@@ -56,6 +60,7 @@ img {
 @import 'components/about';
 @import 'components/notice';
 @import 'components/contact';
+@import 'components/footer';
 
 .section-debug {
   height: 100vh;
