@@ -47,21 +47,40 @@
       </div>
       <div class="contact-container-form">
         <h3 class="contact-title">Formulaire de contact</h3>
-        <div class="row">
-          <input type="text" class="contact-input" name="lastName" id="lastName" placeholder="Nom">
-          <input type="text" class="contact-input" name="firstName" id="firstName"
-                 placeholder="Prénom">
-        </div>
-        <div class="row">
-          <input type="text" class="contact-input" name="email" placeholder="Votre e-mail">
-          <input type="text" class="contact-input" name="phone" placeholder="Téléphone">
-        </div>
-        <div class="row">
+        @if(flashMessages.has('successContact'))
+          <div class="alert alert-success">
+            <div class="alert-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                   fill="currentColor">
+                <path fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clip-rule="evenodd"/>
+              </svg>
+            </div>
+            <div class="alert-message">
+              <div class="alert-message-title">Succès</div>
+              {{ flashMessages.get('successContact') }}
+            </div>
+          </div>
+        @endif
+        <form action="/contact" method="POST">
+          <div class="row">
+            <input type="text" class="contact-input" name="last_name" id="lastName"
+                   placeholder="Nom">
+            <input type="text" class="contact-input" name="first_name" id="firstName"
+                   placeholder="Prénom">
+          </div>
+          <div class="row">
+            <input type="text" class="contact-input" name="email" placeholder="Votre e-mail">
+            <input type="text" class="contact-input" name="phone" placeholder="Téléphone">
+          </div>
+          <div class="row">
           <textarea class="contact-input textarea" name="message"
                     rows="6"
                     placeholder="Votre message"></textarea>
-        </div>
-        <button class="btn btn-contained" type="submit">Envoyer</button>
+          </div>
+          <button class="btn btn-contained" type="submit">Envoyer</button>
+        </form>
       </div>
     </div>
   </div>
