@@ -124,6 +124,15 @@
   }
 }
 
+@include down(965){
+  .card-wrap:hover .card {
+    transform: translateY(0);
+  }
+  .card:after{
+    display: none;
+  }
+}
+
 @include down(900){
 
   .services .dots-services1 {

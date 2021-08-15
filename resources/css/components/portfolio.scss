@@ -201,6 +201,11 @@
     display: none;
   }
 }
+@include down(430){
+  .half-circle{
+    display: none;
+  }
+}
 
 @include down(362) {
 
