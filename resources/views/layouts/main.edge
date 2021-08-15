@@ -4,6 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description"
+        content="Portfolio de Guillemet Jeremy, développeur web exerçant à Limoges (87), sur ce portfolio, vous y trouverez l'intégralité de mes projets."/>
+  {{-- FACEBOOK META --}}
+  <meta property="og:title" content="Portfolio de Guillemet Jeremy"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:description"
+        content="Portfolio de Guillemet Jeremy, développeur web exerçant à Limoges (87), sur ce portfolio, vous y trouverez l'intégralité de mes projets."/>
+  <meta property="author" content="Guillemet Jeremy"/>
+  <meta property="og:image" content="{{asset('assets/images/meta-data/img-portfolio.jpg')}}"/>
+  <meta property="og:image:alt" content="fond bleu avec des figures"/>
+  {{-- END FACEBOOK META--}}
   <link
     rel="stylesheet"
     href="https://unpkg.com/swiper/swiper-bundle.min.css"
@@ -12,6 +23,11 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
   />
+  {{--FAVICON--}}
+  <link rel="icon" href="{{asset('assets/images/favicon-32x32.ico')}}">
+  <link rel="icon" type="icon" href="{{asset('assets/images/favicon-16x16.ico')}}" sizes="16x16">
+  <link rel="icon" type="icon" href="{{asset('assets/images/favicon-32x32.ico')}}" sizes="32x32">
+  {{--END FAVICON--}}
   @entryPointStyles('app')
   @entryPointScripts('app')
   <title>Portfolio Guillemet Jeremy</title>
