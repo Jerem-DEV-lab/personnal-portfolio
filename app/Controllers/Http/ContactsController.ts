@@ -10,7 +10,8 @@ export default class ContactsController {
       session.flash('successContact', "Votre message à bien été envoyer")
       return response.redirect().toPath('/#contact')
     } catch (e) {
-      return e
+      session.flash('errorContact', "Vérifier les champs du formulaire !")
+      return response.redirect().toPath('/#contact')
     }
   }
 }
