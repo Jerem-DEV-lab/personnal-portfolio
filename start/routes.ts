@@ -1,7 +1,5 @@
 import Route from '@ioc:Adonis/Core/Route'
 
-Route.get('/', async ({view}) => {
-  return view.render('index')
-})
+Route.get('/', 'HomeController.index')
 
 Route.post('contact', 'ContactsController.contactMessage')

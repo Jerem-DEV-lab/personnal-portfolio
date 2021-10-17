@@ -1,27 +1,24 @@
 import {DateTime} from 'luxon'
 import {BaseModel, column} from '@ioc:Adonis/Lucid/Orm'
 
-export default class Messages extends BaseModel {
+export default class Projects extends BaseModel {
   @column({isPrimary: true})
   public id: number
 
   @column()
-  public first_name: string
+  public name: string
 
   @column()
-  public last_name: string
+  public description: string
 
   @column()
-  public email: string
+  public link_project: string
 
   @column()
-  public phone: string
+  public link_image: string
 
   @column()
-  public subject: string
-
-  @column()
-  public message: string
+  public status: boolean
 
   @column.dateTime({autoCreate: true})
   public createdAt: DateTime

@@ -13,6 +13,7 @@ export default class ContactValidator {
       trim: true
     }, [rules.email({sanitize: true}), rules.required()]),
     phone: schema.string({}, [rules.mobile({locales: ['fr-FR']}), rules.required()]),
+    subject: schema.string({}, [rules.required(), rules.minLength(6)]),
     message: schema.string({}, [rules.required(), rules.minLength(5), rules.maxLength(1024)])
   })
 
