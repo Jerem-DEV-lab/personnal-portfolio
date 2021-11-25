@@ -1,9 +1,6 @@
 {
   "assets/app.css": "http://localhost:8080/assets/app.css",
   "assets/app.js": "http://localhost:8080/assets/app.js",
-  "assets/images/projects/projet-estelle.jpg": "http://localhost:8080/assets/images/projects/projet-estelle.a682d42d.jpg",
-  "assets/images/projects/projet-reptile-france.jpg": "http://localhost:8080/assets/images/projects/projet-reptile-france.b7680646.jpg",
-  "assets/images/projects/projet-alain.jpg": "http://localhost:8080/assets/images/projects/projet-alain.f9ff6124.jpg",
   "assets/images/meta-data/img-portfolio.jpg": "http://localhost:8080/assets/images/meta-data/img-portfolio.56a45205.jpg",
   "assets/images/shapes/dots-carre.png": "http://localhost:8080/assets/images/shapes/dots-carre.d70b4ab1.png",
   "assets/images/shapes/layout-img.svg": "http://localhost:8080/assets/images/shapes/layout-img.cfee21c0.svg",
