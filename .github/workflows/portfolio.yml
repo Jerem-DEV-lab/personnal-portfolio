@@ -1,0 +1,35 @@
+name: Node.js CI
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: self-hosted
+
+    strategy:
+      matrix:
+        node-version: [ 14.x ]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build serverSide
+        run: make deploy
+      - name: SET ENV Server
+        run: |
+          cd ./api/build
+          touch .env
+          echo ${{ secrets.NODE_ENV }} >> .env
+  deploy:
+    runs-on: self-hosted
+    needs: build
+    strategy:
+      matrix:
+        node-version: [ 14.x ]
+    steps:
+      - name: Déploiement DB
+        run: make deployDB
+      - name: Redémarrage PM2
+        run: make restartApi
