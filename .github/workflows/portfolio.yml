@@ -6,17 +6,14 @@ on:
 
 jobs:
   build:
-
     runs-on: self-hosted
-
     strategy:
       matrix:
-        node-version: [ 14.x ]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+        node-version: [ 12.x ]
     steps:
       - uses: actions/checkout@v2
       - name: Build serverSide
-        run: make deploy
+        run: make install
       - name: SET ENV Server
         run: |
           cd ./api/build
@@ -27,7 +24,7 @@ jobs:
     needs: build
     strategy:
       matrix:
-        node-version: [ 14.x ]
+        node-version: [ 12.x ]
     steps:
       - name: Déploiement DB
         run: make deployDB
