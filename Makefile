@@ -7,4 +7,4 @@ restart:
 	cd ./build && pm2 start server.js
 
 deployDB:
-	cd ./api/build && node ace migration:run --force
+	cd ./build && node ace migration:run --force
