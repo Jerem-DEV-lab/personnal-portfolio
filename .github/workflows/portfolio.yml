@@ -18,7 +18,18 @@ jobs:
         run: |
           cd ./build
           touch .env
+          echo ${{ secrets.HOST }} >> .env
+          echo ${{ secrets.APP_KEY }} >> .env
+          echo ${{ secrets.CACHE_VIEW }} >> .env
+          echo ${{ secrets.DB_CONNECTION }} >> .env
+          echo ${{ secrets.MYSQL_DB_NAME }} >> .env
+          echo ${{ secrets.MYSQL_HOST }} >> .env
+          echo ${{ secrets.MYSQL_PASSWORD }} >> .env
+          echo ${{ secrets.MYSQL_PORT }} >> .env
+          echo ${{ secrets.MYSQL_USER }} >> .env
           echo ${{ secrets.NODE_ENV }} >> .env
+          echo ${{ secrets.PORT }} >> .env
+          echo ${{ secrets.SESSION_DRIVER }} >> .env
   deploy:
     runs-on: self-hosted
     needs: build
