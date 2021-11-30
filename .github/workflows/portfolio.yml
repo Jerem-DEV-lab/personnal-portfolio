@@ -16,7 +16,7 @@ jobs:
         run: make install
       - name: SET ENV Server
         run: |
-          cd ./api/build
+          cd ./build
           touch .env
           echo ${{ secrets.NODE_ENV }} >> .env
   deploy:
