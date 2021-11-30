@@ -3,7 +3,7 @@ install:
 	npm run build
 	cd ./build && npm ci --production
 
-restart:
+restartApi:
 	cd ./build && pm2 start server.js
 
 deployDB:
