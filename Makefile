@@ -4,7 +4,7 @@ install:
 	cd ./build && npm ci --production
 
 restartApi:
-	cd ./build && pm2 start server.js
+	cd ./build && pm2 restart 0
 
 deployDB:
 	cd ./build && node ace migration:run --force
