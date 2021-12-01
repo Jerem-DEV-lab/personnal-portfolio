@@ -30,7 +30,7 @@
     </div>
     <div class="section-body">
       <div class="grid-portfolio" style="position: relative">
-        @if(projects)
+        @if(projects && projects.status)
           @each (project in projects)
           <div class="grid-item">
             <div class="gallery-image">
@@ -45,11 +45,7 @@
                     fill="white"/>
                 </svg>
                 <div class="img-description">
-                  <h3>{{project.name}}
-                    @if(!project.status)
-                      [en cours de développement]
-                      @end
-                  </h3>
+                  <h3>{{project.name}}</h3>
                   <a href="{{project.link_project}}"
                      target="_blank"
                      rel="noreferrer"
