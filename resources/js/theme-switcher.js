@@ -43,5 +43,8 @@ function changeThemePreferenceUser() {
   }
 }
 
-checkBoxTheme.addEventListener(('change'), switchTheme)
-changeThemePreferenceUser()
+
+if(checkBoxTheme){
+  checkBoxTheme.addEventListener(('change'), switchTheme)
+  changeThemePreferenceUser()
+}

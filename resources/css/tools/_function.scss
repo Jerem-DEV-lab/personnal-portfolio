@@ -5,3 +5,7 @@
 
   @return $number;
 }
+
+@function space($i) {
+  @return calc(#{$i} * var(--space));
+}

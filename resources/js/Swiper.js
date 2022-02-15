@@ -8,14 +8,16 @@ function closeMenu() {
   document.body.classList.remove("stop-scrolling");
 }
 
-hamburger_menu.addEventListener("click", () => {
-  if (!navbar.classList.contains("open")) {
-    navbar.classList.add("open");
-    document.body.classList.add("stop-scrolling");
-  } else {
-    closeMenu();
-  }
-});
+if(hamburger_menu){
+  hamburger_menu.addEventListener("click", () => {
+    if (!navbar.classList.contains("open")) {
+      navbar.classList.add("open");
+      document.body.classList.add("stop-scrolling");
+    } else {
+      closeMenu();
+    }
+  });
+}
 
 links.forEach((link) => link.addEventListener("click", () => closeMenu()));
 

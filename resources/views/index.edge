@@ -7,4 +7,80 @@
   @include('partials/about')
 {{--  @include('partials/review')--}}
   @include('partials/contact')
+
+  <button class="btn-back" id="btn-back" role="button" aria-label="Remonter le site vers le haut"
+          style="display: none">
+    <i class="fas fa-chevron-up"></i></button>
+  <footer class="footer">
+    <div class="container">
+      <div class="grid-footer">
+        <div class="column-footer footer-about">
+          <h3 class="title-sm">A propos du design</h3>
+          <p class="footer-text">
+            Certaines illustrations du portfolio sont libres de droits et disponible sur <a
+                    href="https://undraw.co" class="strong">undraw.co</a> et ont été modifier par mes
+            soins. Les illustrations des projets ne sont pas libres de droits et nécessite mon
+            autorisation pour leur utilisation.
+          </p>
+        </div>
+        <div class="column-footer footer-links">
+          <div class="column-list">
+            <h3 class="title-sm underline-sm">Liens</h3>
+            <ul>
+              <li>
+                <a href="#">Accueil</a>
+              </li>
+              <li>
+                <a href="#services">Services</a>
+              </li>
+              <li>
+                <a href="#portfolio">Portfolio</a>
+              </li>
+              <li>
+                <a href="#about">A propos</a>
+              </li>
+              <li>
+                <a href="#contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+          <div class="column-list">
+            <h3 class="title-sm underline-sm">Services</h3>
+            <ul>
+              <li>Maquette web</li>
+              <li>Développement serveur</li>
+              <li>Développement front</li>
+              <li>Développement fullStack</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <p class="footer-text">
+          Copyright &copy; 2021 Tous droits réserver | Made By&nbsp;<strong class="strong">Guillemet
+            Jeremy.</strong>
+        </p>
+        <div class="container-social">
+          <p class="footer-text social">
+            Suivez moi sur les réseaux
+          </p>
+          <ul class="lists-social" role="list">
+            <li role="listitem">
+              <a href="https://github.com/Jerem-DEV-lab">
+                <i class="fab fa-github"></i>
+              </a>
+            </li>
+            <li role="listitem">
+              <a href="https://www.linkedin.com/in/jeremy-guillemet/">
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </li>
+          </ul>
+          <div class="footer-actions">
+            @!component('components/switch')
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
   @end
