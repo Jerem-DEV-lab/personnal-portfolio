@@ -1,0 +1,53 @@
+.header-cv {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-cv .wrapper-picture img {
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.main-cv {
+  display: grid;
+  grid-template-columns: 0.5fr 2fr;
+
+  padding: space(2) space(6);
+}
+
+.wrapper-cv {
+  border: solid .1px var(--border-alt);
+  border-radius: 4px;
+  padding: space(1) space(2);
+  background-color: var(--body-color-secondary);
+}
+
+.wrapper-cv h2 {
+  display: flex;
+  align-items: center;
+  margin: 0;
+
+  & span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: space(1.5);
+  }
+}
+
+.skills-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: space(2);
+
+  & .skill-icon {
+    display: flex;
+    align-items: center;
+    margin-right: space(1);
+  }
+}
+
+.qualities-list{
+
+}

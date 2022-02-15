@@ -14,6 +14,7 @@
   --svg-contrast: #D0CDE1;
   --border-review-svg: #3F3D56;
   --switch-theme-background: #3F3D56;
+  --space: 8px;
 }
 
 @include dark() {
@@ -24,6 +25,7 @@
   --opacity-shapes: 0.6;
   --svg-contrast: #5E5E5E;
   --border-review-svg: #FFFFFF;
+  --border-alt: #EBE9F1;
   --switch-theme-background: #FFFF;
 }
 
@@ -62,7 +64,7 @@ img {
 @import 'components/notice';
 @import 'components/contact';
 @import 'components/footer';
-
+@import 'pages/cv';
 .section-debug {
   height: 100vh;
 }
